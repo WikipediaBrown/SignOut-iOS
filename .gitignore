@@ -94,4 +94,4 @@ GoogleService-Info.plist
 # .pdf
 #
 # This app uses PDFs in testing. There is no need to include test data with this project.
-.pdf
+*.pdf
