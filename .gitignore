@@ -90,3 +90,8 @@ iOSInjectionProject/
 #
 # This is your Google Service Account file. This service account is used to authorize client devices for access to GCP (Google cloud Platform) and/or Firebase. It is bad practice to include this file in your git repositories. You should instead generate this file during your CI/CD process or store it seperately from this Swift project. 
 GoogleService-Info.plist
+
+# .pdf
+#
+# This app uses PDFs in testing. There is no need to include test data with this project.
+.pdf
