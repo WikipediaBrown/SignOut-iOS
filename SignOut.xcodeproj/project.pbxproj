@@ -13,6 +13,7 @@
 		5B66380C22ECEAC800F369BC /* SignOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66380B22ECEAC800F369BC /* SignOutTests.swift */; };
 		5B66381722ECEAC800F369BC /* SignOutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66381622ECEAC800F369BC /* SignOutUITests.swift */; };
 		5B66382522ECEE9400F369BC /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66382422ECEE9400F369BC /* ScanViewController.swift */; };
+		5B66382722ECF7B900F369BC /* Nutrition.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5B66382622ECF7B900F369BC /* Nutrition.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		5B66381622ECEAC800F369BC /* SignOutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutUITests.swift; sourceTree = "<group>"; };
 		5B66381822ECEAC800F369BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B66382422ECEE9400F369BC /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		5B66382622ECF7B900F369BC /* Nutrition.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Nutrition.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		5B6637EA22ECEAC700F369BC = {
 			isa = PBXGroup;
 			children = (
+				5B66382622ECF7B900F369BC /* Nutrition.pdf */,
 				5B6637F522ECEAC700F369BC /* SignOut */,
 				5B66380A22ECEAC800F369BC /* SignOutTests */,
 				5B66381522ECEAC800F369BC /* SignOutUITests */,
@@ -226,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B66382722ECF7B900F369BC /* Nutrition.pdf in Resources */,
 				5B66380122ECEAC800F369BC /* LaunchScreen.storyboard in Resources */,
 				5B6637FE22ECEAC800F369BC /* Assets.xcassets in Resources */,
 			);

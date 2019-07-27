@@ -13,8 +13,11 @@ class ScanViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
+        let url = Bundle.main.url(forResource: "Nutrition", withExtension: "pdf")
         
-//        let document = PDFDocument(url: <#T##URL#>)
+        let document = PDFDocument(url: url!)
+        
+        scandocument(pdfDocument: document!)
     }
     
     func scandocument(pdfDocument: PDFDocument) {
