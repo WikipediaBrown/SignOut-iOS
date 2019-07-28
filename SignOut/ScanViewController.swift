@@ -35,8 +35,10 @@ class ScanViewController: UIViewController {
     }
     
     private func scandocument(pdfDocument: PDFDocument) {
-        
         let parsedPDF = parsePDF(pdfDocument: pdfDocument)
+        
+        guard parsedPDF.count > 0 else { return }
+        guard parsedPDF[0].count > 7 else { return }
         
         let date = getDate(substring: parsedPDF[0][0])
         let pid = getPid(substring: parsedPDF[0][2])
@@ -55,6 +57,12 @@ class ScanViewController: UIViewController {
         let lastTransactionCIFName = getLastTransactionCIFName(substring: parsedPDF[0][5])
         let lastTransactionDate = getLastTransactionDate(substring: parsedPDF[0][6])
         
+        
+        parseFirstPageItems(page: parsedPDF[0])
+        
+        
+        
+        
         //        let record = Record(date: <#T##Date#>, pid: <#T##String#>, firstName: <#T##String#>, lastName: <#T##String#>, sex: <#T##String#>, homeCIF: <#T##String#>, lastInitialIssue: <#T##Date#>, grade: <#T##String#>, unit: <#T##String#>, dmos: <#T##String#>, expectedClearance: <#T##String#>, branch: <#T##String#>, lastTransactionDocumentNumber: <#T##String#>, lastTransactionDTTC: <#T##String#>, lastTransactionCIFName: <#T##String#>, lastTransactionDate: <#T##Date#>, items: <#T##[Item]#>)
     }
     
@@ -67,6 +75,15 @@ class ScanViewController: UIViewController {
             parsed.append(stuff)
         }
         return parsed
+    }
+    
+    func parseFirstPageItems(page: [Substring]) {
+        for i in 8 ..< page.count {
+//            print(page[i])
+        }
+        
+        let columnOneAndTwo = page[8]
+        print(columnOneAndTwo)
     }
     
     private func getDate(substring: Substring) -> Date {
@@ -175,5 +192,14 @@ class ScanViewController: UIViewController {
             return newDate
         }
         return Date(timeIntervalSinceReferenceDate: 0)
+    }
+    
+    private func returnDataPointString(substring: Substring, firstString: String, lastString: String) -> String {
+        let parsedSubstring = substring.components(separatedBy: firstString)
+        guard parsedSubstring.count > 1 else { return String() }
+        let sections = parsedSubstring[1].components(separatedBy: lastString)
+        guard sections.count > 0 else { return String() }
+        let dataPoint = sections[0]
+        return dataPoint
     }
 }

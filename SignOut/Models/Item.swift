@@ -9,15 +9,15 @@
 import Foundation
 
 struct Item {
-    let issuingCIF: String
-    let menu: String
-    let lin: String
-    let size: String
-    let cic: Character?
-    let nomenclature: String
-    let partialNSN: Int
-    let auQTY: Int
-    let ohQTY: String
-    let pcsTrans: String
-    let etsTrans: String
+    var issuingCIF: String = String()
+    var menu: String = String()
+    var lin: String = String()
+    var size: String = String()
+    var cic: Character = Character("")
+    var nomenclature: String = String()
+    var partialNSN: Int = Int()
+    var auQTY: Int = Int()
+    var ohQTY: String = String()
+    var pcsTrans: String = String()
+    var etsTrans: String = String()
 }
